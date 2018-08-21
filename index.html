@@ -9,13 +9,80 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
 
     <!-- Stylesheet -->
-
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+<div class="container" section="main">
 
-    
+    <div class="row" id="categories">
+        <div class="col-4">
+            <div class="container__category">
+                <select class="category" name="Segment" style="width: 100%;">
+                    <option value="all">All segments</option>
+                    <option value="segment_1">Convential onshore</option>
+                    <option value="segment_2">Floating production</option>
+                    <option value="segment_3">Gas processing</option>
+                    <option value="segment_4">Natural Gas liquefaction</option>
+                    <option value="segment_5">Petrochemicals</option>
+                    <option value="segment_6">Pipelines</option>
+                    <option value="segment_7">Refining</option>
+                    <option value="segment_8">Subsea</option>
+                    <option value="segment_9">Terminals</option>
+                    <option value="segment_10">Unconventional onshore</option>
+                    <option value="segment_11">Offshore platforms</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="container__category">
+                <select class="category" name="Scope" style="width: 100%;">
+                    <option value="all">All scopes</option>
+                    <option value="scope_1">Automation</option>
+                    <option value="scope_2">Engineering, procurement and construction</option>
+                    <option value="scope_3">Process electrification</option>
+                    <option value="scope_4">Instrumentation and analyzers</option>
+                    <option value="scope_5">Integrated operations</option>
+                    <option value="scope_6">Safety systems</option>
+                    <option value="scope_7">Services</option>
+                    <option value="scope_8">Telecommunications</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="container__category">
+                <select class="category" name="Geographical Location" style="width: 100%;">
+                    <option value="all">All locations</option>
+                    <optgroup label="Africa">
+                        <option value="AO">Angola</option>
+                        <option value="TN">Tunisia</option>
+                        <option value="DZ">Algeria</option>
+                    </optgroup>
+                    <optgroup label="Asia and Middle East">
+                        <option value="MY">Malaysia</option>
+                        <option value="AE">United Arab Emirates</option>
+                    </optgroup>
+                    <optgroup label="Europe">
+                        <option value="NO">Norway</option>
+                        <option value="UK">United Kingdom</option>
+                    </optgroup>
+                    <optgroup label="Oceania">
+                        <option value="AU">Australia</option>
+                    </optgroup>
+                    <optgroup label="South America">
+                        <option value="BR">Brazil</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+
+        <div class="row" id="results"></div>
+
+    </div> <!-- END MAIN -->
+
     <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
 
 </html>
