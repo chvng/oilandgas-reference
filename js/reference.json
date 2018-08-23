@@ -5,7 +5,7 @@
         "image": "https://www07.abb.com/images/librariesprovider94/default-album/qclng-modules_cropped.jpg?sfvrsn=1",
         "description": "World's first coal seam gas to LNG project",
         "segment": "Natural Gas liquefaction",
-        "scope": "Automation",
+        "scope": ["Automation"],
         "location": ["Oceania", "Australia"],
         "year": 2014
     },
@@ -15,7 +15,7 @@
         "image": "https://www07.abb.com/images/librariesprovider94/default-album/telecom-offshore1_web.jpg?sfvrsn=1",
         "description": "ABB provides internal and external telecommunication systems for three Statoil projects on the Norwegian continental shelf",
         "segment": "Offshore platforms",
-        "scope": "Telecommunications",
+        "scope": ["Telecommunications"],
         "location": ["Europe", "Norway"],
         "year": 2015
     },
@@ -35,7 +35,7 @@
         "image": "https://www07.abb.com/images/librariesprovider94/default-album/troll_header.jpg?sfvrsn=1",
         "description": "World's first DC power-from-shore installation",
         "segment": "Offshore platforms",
-        "scope": "Process electrification",
+        "scope": ["Process electrification"],
         "location": ["Europe", "Norway"],
         "year": 2015
     },
@@ -55,7 +55,7 @@
         "image": "https://www07.abb.com/images/librariesprovider94/subsea/head-image/subsea_head.jpg?sfvrsn=1",
         "description": "ABB and Statoil collaborating to develop deepwater subsea power and control technologies",
         "segment": "Subsea",
-        "scope": "Process electrification",
+        "scope": ["Process electrification"],
         "location": ["Europe", "Norway"],
         "year": 2017
     },
@@ -65,7 +65,7 @@
         "image": "https://www07.abb.com/images/librariesprovider94/subsea/head-image/subsea_aker-solutions_head.png?sfvrsn=1",
         "description": "New world record on world's first subsea gas compression system",
         "segment": "Subsea",
-        "scope": "Process electrification",
+        "scope": ["Process electrification"],
         "location": ["Europe", "Norway"],
         "year": 2015
     },
@@ -85,7 +85,7 @@
         "image": "https://www07.abb.com/images/librariesprovider94/default-album/02-liten.png?sfvrsn=1",
         "description": "Electrifying one of the world's first commercial floating liquefield natural gas (FLNG)",
         "segment": "Natural Gas liquefaction",
-        "scope": "Process electrification",
+        "scope": ["Process electrification"],
         "location": ["Asia and Middle East", "Malaysia"],
         "year": 2018
     },
@@ -95,7 +95,7 @@
         "image": "https://www07.abb.com/images/librariesprovider94/default-album/bp-p-l-c.jpg?sfvrsn=1",
         "description": "ABB delivers telecommunications to Skarv FPSO",
         "segment": "Floating production",
-        "scope": "Telecommunications",
+        "scope": ["Telecommunications"],
         "location": ["Europe", "Norway"],
         "year": 2011
     },
@@ -105,7 +105,7 @@
         "image": "https://www07.abb.com/images/librariesprovider94/default-album/alvheim-fpso.jpg?sfvrsn=1",
         "description": "ABB delivers telecommunications to Alvheim FPSO",
         "segment": "Floating production",
-        "scope": "Telecommunications",
+        "scope": ["Telecommunications"],
         "location": ["Europe", "Norway"],
         "year": 2007
     },
@@ -125,7 +125,7 @@
         "image": "https://www07.abb.com/images/librariesprovider94/default-album/johan-sverdrup-photo-credit-statoil.png?sfvrsn=1",
         "description": "Power from shore enables reduction of CO2 emissions",
         "segment": "Offshore platforms",
-        "scope": "Process electrification",
+        "scope": ["Process electrification"],
         "location": ["Europe", "Norway"],
         "year": 2019
     },
@@ -145,7 +145,7 @@
         "image": "https://www07.abb.com/images/librariesprovider94/Header-image-1183x350/regap-1183x353-with-credit.jpg?sfvrsn=ed5fdc1e_0",
         "description": "Petrobras' largest petrol and diesel plant is modernized",
         "segment": "Refining",
-        "scope": "Services",
+        "scope": ["Services"],
         "location": ["South America", "Brazil"],
         "year": 2015
     },
@@ -155,7 +155,7 @@
         "image": "https://www07.abb.com/images/librariesprovider94/Header-image-1183x350/zirku-1183x353.jpg?sfvrsn=14eaa11e_0",
         "description": "ABB upgrading power systems for gian Gulf oilfied",
         "segment": "Conventional onshore",
-        "scope": "Engineering procurement and construction",
+        "scope": ["Engineering procurement and construction"],
         "location": ["Asia and Middle East", "United Arab Emirates"],
         "year": 2016
     },
@@ -165,7 +165,7 @@
         "image": "https://www07.abb.com/images/librariesprovider94/Header-image-1183x350/nawara-1183x353a41ec2e6c1f463c09537ff0000433538.jpg?sfvrsn=9aeaa11e_0",
         "description": "Turnkey project will be key part of country's economy",
         "segment": "Gas processing",
-        "scope": "Engineering procurement and construction",
+        "scope": ["Engineering procurement and construction"],
         "location": ["Africa", "Tunisia"],
         "year": 2016
     },
@@ -175,7 +175,7 @@
         "image": "https://www07.abb.com/images/librariesprovider94/default-album/mbr-cropped---heading.jpg?sfvrsn=1",
         "description": "Redcuded CO2 emissions and maintenance costs",
         "segment": "Offshore platforms",
-        "scope": "Process electrification",
+        "scope": ["Process electrification"],
         "location": ["Asia and Middle East", "United Arab Emirates"],
         "year": 2018
     },
@@ -185,7 +185,7 @@
         "image": "https://www07.abb.com/images/librariesprovider94/Header-image-1183x350/melkoya_1183x353.jpg?sfvrsn=1",
         "description": "Modernizing automation software and electrical hardware",
         "segment": "Refining",
-        "scope": "Services",
+        "scope": ["Services"],
         "location": ["South America", "Brazil"],
         "year": 2015
     },
