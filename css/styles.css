@@ -72,6 +72,19 @@ select {
 .col-11 { width: 91.66%;}
 .col-12 { width: 100%;  }
 
+
+.placeholder {
+    max-width: 650px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  .hide {
+      opacity: 0;
+  }
+
 /*==========================
             CONTAINER
 ============================*/
