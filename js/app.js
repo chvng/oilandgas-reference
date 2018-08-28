@@ -2,29 +2,53 @@
  * @author Chuong N.
  */
 
-$(document).ready(function() {
-    let $results = $('#results');  
-    let $category = $(".category");
-
-    $.getJSON('../js/reference.json', function(data) {
-        console.log(data); // testing if this works
-        
-        $(data).each(function (i, reference) {
-            $results.append(showResults(reference))
-        });
-    });
-
+$(document).ready(function () {
+    // Variables
+    let $results = $('#results');
 
     /**
-     * This function shows the output to HTML with the data from
-     * JSON file {reference.json}.
+     * Fetching JSON from the file..
+     * REMINDER: Replace ["../references.json"] with provided link from Sitefinity when going online.
      */
-    function showResults(result) {
-        return `
-        <div class="col-3">
-            ${result.name}
-        </div>
-        `
+    $.getJSON("../references.json", function (data) {
+
+            selectedSegment(data);
+
+    });
+
+    function selectedSegment(data) {
+        let $segment = $('#segment');
+        $.each(data, function (i, ref) {
+            $segment.change(function () {
+                if ($(this).val() === ref.segment) {
+                    console.log(ref.name);
+                    htmlJSON(data);
+                }
+            });
+        });
     }
 
-});
+    function htmlJSON(data) {
+        var newHTML = [];
+        for(let i = 0; i < data.length; i++) {
+            newHTML.push('<div class="placeholder">' + data[i].name + '</div>');
+        }
+        $results.html(newHTML.join(""));
+    }
+
+    /**
+     * Appending JSON data to HTML page.
+     */
+    function appendJSON(data) {
+        $results.append(`
+                    <div class="placeholder">
+                        <h3>${data.name}</h3>
+                        <br />
+                        Segment: ${data.segment}
+                        <br />
+                        Scope: ${data.scope}
+                    </div>
+                `
+        );
+    }
+}); // END DOCUMENT
