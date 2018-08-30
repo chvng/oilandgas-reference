@@ -18,7 +18,7 @@
     <div class="row" id="categories">
         <div class="col-4">
             <div class="container__category">
-                <select class="category" name="Segment" style="width: 100%;">
+                <select name="Segment" id="segment" style="width: 100%;">
                     <option value="all">All segments</option>
                     <option value="Conventional onshore">Conventional onshore</option>
                     <option value="Floating production">Floating production</option>
@@ -36,7 +36,7 @@
         </div>
         <div class="col-4">
             <div class="container__category">
-                <select class="category" name="Scope" style="width: 100%;">
+                <select name="Scope" id="scope" tabindex="1" style="width: 100%;">
                     <option value="all">All scopes</option>
                     <option value="Automation">Automation</option>
                     <option value="Engineering, procurement and construction">Engineering, procurement and construction</option>
@@ -49,11 +49,9 @@
                 </select>
             </div>
         </div>
-        <!-- DELETE THIS AFTER FINISHING TESTING -->
-        <div class="col-4"><div class="container__category" style="height: 60px"></div></div>
-       <!-- <div class="col-4">
+        <div class="col-4">
             <div class="container__category">
-                <select class="category" name="Geographical Location" style="width: 100%;">
+                <select name="Geographical Location" id="geolocation" style="width: 100%;">
                     <option value="all">All locations</option>
                     <optgroup label="Africa">
                         <option value="AO">Angola</option>
@@ -76,7 +74,7 @@
                     </optgroup>
                 </select>
             </div> 
-        </div> -->
+        </div>
 
         <div class="row" id="results"></div>
 
