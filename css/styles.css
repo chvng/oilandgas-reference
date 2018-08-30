@@ -27,6 +27,17 @@ body {
     box-sizing: border-box;
 }
 
+p {
+    font-size: 13px;
+    margin-top: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+a {
+    color: black;
+}
+
 /*==========================
             SELECT
 ============================*/
@@ -44,6 +55,9 @@ select {
     background: #fff; 
 }
 
+.select--category { font-weight: bold; }
+.select--item { padding-left: 25px;}
+
 /*==========================
             ROW/COLUMN
 ============================*/
@@ -56,7 +70,7 @@ select {
 
 [class*="col-"] {
     float: left;
-    padding: 15px;
+    padding: 20px;
 }
 
 .col-1  { width: 8.33%; }
@@ -72,18 +86,10 @@ select {
 .col-11 { width: 91.66%;}
 .col-12 { width: 100%;  }
 
-
-.placeholder {
-    max-width: 650px;
-    padding: 20px;
-    margin: 30px auto;
-    background-color: #fff;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-  .hide {
-      opacity: 0;
-  }
+.col-3--md {
+    height: 290px;
+    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.1);
+}
 
 /*==========================
             CONTAINER
@@ -128,4 +134,36 @@ select {
     background-color: #f1f1f1;
 }
 
+.container__text {
+    display: block;
+    height: 9.5em;
+    padding-top: 0.5em;
+    line-height: 1em;
+    text-overflow: ellipsis;
+}
 
+.container__text--header {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 21px;
+}
+
+
+.container__image {
+    overflow: hidden;
+    display: block;
+    height: 45%;
+    width: 100%;
+    padding: 0;
+    position: relative;
+    
+}
+
+/*==========================
+            IMG
+============================*/
+
+.img--resize {
+    height:     100%;
+    max-width:  100%;
+}
