@@ -7,16 +7,63 @@ $(document).ready(function () {
     let $results = $('#results');
     let $segment = $('#segment');
     let $scope = $('#scope');
+    let $geolocation = $('#geolocation');
+
+    $.getJSON("../references.json", function (data) {
+        showAll(data);
+    });
 
     /**
      * Fetching JSON from the file..
      * REMINDER: Replace ["../references.json"] with provided link from Sitefinity when going online.
      */
     $.getJSON("../references.json", function (data) {
-        showAll(data);
-        selectedSegment(data);
-        selectedScope(data);
+        $('#segment, #scope, #geolocation').change(function() {
+            $results.empty();
+
+            filterData(data);
+        });
     });
+
+    function filterData(data) {
+        $.each(data, function(i, ref) {
+                           
+            let isLikeSegment = $segment.val() == "all";
+            let isLikeScope = $scope.val() == "all";
+            let isLikeLocation = $geolocation.val() == "all";
+
+
+            // isLikeSegment = $segment.val() == "all" ? true : isLikeSegment = $segment.val() == ref.segment;
+
+            if(!isLikeSegment) {
+                isLikeSegment = $segment.val() === ref.segment;
+            }
+            if(!isLikeScope) {
+                isLikeScope = $scope.val().map(scope => ref.scope.includes(scope)).includes(true);
+                console.log(isLikeScope);
+            }
+            if(!isLikeLocation) {
+                console.log($geolocation.val(), ref.location[1]);
+                isLikeLocation = $geolocation.val() == ref.location[1];
+            }
+
+            if(isLikeSegment && isLikeScope && isLikeLocation) appendJSON(ref);
+        });
+    } 
+
+    function selectedGeolocation(data) {
+        $geolocation.change(function() {
+            $results.empty();
+            $.each(data, function(i, ref) {
+                $.each(ref.location, function(j, location) {
+                    if($geolocation.val() === location) {
+                        console.log(ref.name+" -- "+ref.location);
+                        appendJSON(ref);
+                    }
+                }); 
+            });
+        });
+    }
 
     function selectedScope(data) {
         $scope.change(function() {
@@ -74,6 +121,7 @@ $(document).ready(function () {
     /**
      * Passing the JSON data to HTML page.
      * Not sure if this will be needed anymore - keeping it anyways.
+     
     function htmlJSON(data) {
         let output = [];
 
@@ -97,5 +145,6 @@ $(document).ready(function () {
         $results.html(output.join(''));
     }
     */
+    
 
 }); // END DOCUMENT
