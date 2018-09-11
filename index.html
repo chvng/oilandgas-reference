@@ -10,16 +10,21 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
-</head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+ </head>
 
 <body>
 <div class="container" section="main">
+    <div class="header">
+        <h1>Oil & Gas References</h1>
+    </div>
 
-    <div class="row" id="categories">
-        <div class="col-4">
-            <div class="container__category">
+    <div class="container__category">
+        <div class="row" id="categories">
+            <div class="col-4">
+                <h3>Segment</h3>
                 <select name="Segment" id="segment" style="width: 100%;">
-                    <option value="all">All segments</option>
+                    <option value="All" selected="selected">All segments</option>
                     <option value="Conventional onshore">Conventional onshore</option>
                     <option value="Floating production">Floating production</option>
                     <option value="Gas processing">Gas processing</option>
@@ -32,12 +37,11 @@
                     <option value="Unconventional onshore">Unconventional onshore</option>
                     <option value="Offshore platforms">Offshore platforms</option>
                 </select>
-            </div>
         </div>
         <div class="col-4">
-            <div class="container__category">
-                <select name="Scope" id="scope" tabindex="1" style="width: 100%;">
-                    <option value="all">All scopes</option>
+                <h3>Scope(s)</h3>
+                <select name="Scope" id="scope" multiple="multiple" tabindex="3" style="width: 100%;">
+                    <option value="All" selected="selected">All scopes</option>
                     <option value="Automation">Automation</option>
                     <option value="Engineering, procurement and construction">Engineering, procurement and construction</option>
                     <option value="Process electrification">Process electrification</option>
@@ -47,41 +51,44 @@
                     <option value="Services">Services</option>
                     <option value="Telecommunications">Telecommunications</option>
                 </select>
-            </div>
         </div>
         <div class="col-4">
-            <div class="container__category">
+                <h3>Geographical location</h3>
                 <select name="Geographical Location" id="geolocation" style="width: 100%;">
-                    <option value="all">All locations</option>
-                    <optgroup label="Africa">
-                        <option value="AO">Angola</option>
-                        <option value="TN">Tunisia</option>
-                        <option value="DZ">Algeria</option>
-                    </optgroup>
-                    <optgroup label="Asia and Middle East">
-                        <option value="MY">Malaysia</option>
-                        <option value="AE">United Arab Emirates</option>
-                    </optgroup>
-                    <optgroup label="Europe">
-                        <option value="NO">Norway</option>
-                        <option value="UK">United Kingdom</option>
-                    </optgroup>
-                    <optgroup label="Oceania">
-                        <option value="AU">Australia</option>
-                    </optgroup>
-                    <optgroup label="South America">
-                        <option value="BR">Brazil</option>
-                    </optgroup>
+                    <option value="All" selected="selected">All locations</option>
+                    <option class="select--bold" value="Africa">Africa</option>
+                        <option value="Angola">&nbsp;&nbsp;&nbsp;Angola</option>
+                        <option value="Tunisia">&nbsp;&nbsp;&nbsp;Tunisia</option>
+                        <option value="Algeria">&nbsp;&nbsp;&nbsp;Algeria</option>
+    
+                    
+                    <option class="select--bold" value="Asia and Middle East">Asia and Middle East</option>
+                        <option value="Malaysia">&nbsp;&nbsp;&nbsp;Malaysia</option>
+                        <option value="United Arab Emirates">&nbsp;&nbsp;&nbsp;United Arab Emirates</option>
+                        
+                  <option class="select--bold" value="Europe">Europe</option>
+                        <option value="Norway">&nbsp;&nbsp;&nbsp;Norway</option>
+                        <option value="United Kingdom">&nbsp;&nbsp;&nbsp;United Kingdom</option>
+
+                    <option class="select--bold" value="Oceania">Africa</option>
+                        <option value="Australia">&nbsp;&nbsp;&nbsp;Australia</option>
+                    
+                    <option class="select--bold" value="South America">South America</option>
+                        <option value="Brazil">&nbsp;&nbsp;&nbsp;Brazil</option>
+                    
                 </select>
             </div> 
         </div>
+    </div>
 
-        <div class="row" id="results"></div>
+    <div class="row" id="counter" style="padding: 20px 0px 20px 0px;"></div>
+    <div class="row" id="results"></div>
 
-    </div> <!-- END MAIN -->
+</div> <!-- END MAIN -->
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 </body>
 
