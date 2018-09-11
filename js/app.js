@@ -1,100 +1,77 @@
 /**
  * @author Chuong N.
+ * REMINDER: Replace ["../references.json"] with provided link from Sitefinity when going online.
  */
 
 $(document).ready(function () {
-    // Variables
+    // Variables   
     let $results = $('#results');
     let $segment = $('#segment');
     let $scope = $('#scope');
     let $geolocation = $('#geolocation');
 
-    $.getJSON("../references.json", function (data) {
-        showAll(data);
-    });
+    // Start program.
+    program();
+
+    function program() {
+        rsAll();
+        rsFilter();
+    }
 
     /**
-     * Fetching JSON from the file..
-     * REMINDER: Replace ["../references.json"] with provided link from Sitefinity when going online.
+     * Appending all the results from JSON to HTML with no conditions.
      */
-    $.getJSON("../references.json", function (data) {
-        $('#segment, #scope, #geolocation').change(function() {
-            $results.empty();
-
-            filterData(data);
+    function rsAll() {
+        $.getJSON("../references.json", function(data) {
+            $.each(data, function(i, reference) {
+                appendJSON(reference);
+            });
+            rsCounter();
         });
-    });
+    }
 
-    function filterData(data) {
-        $.each(data, function(i, ref) {
-                           
-            let isLikeSegment = $segment.val() == "all";
-            let isLikeScope = $scope.val() == "all";
-            let isLikeLocation = $geolocation.val() == "all";
+    /**
+     * Helper function to filter the right matching value from dropdown menus.
+     */
+    function rsFilter() {
+        let all = "All";
 
+        $.getJSON("../references.json", function(data) {
+            $('#segment, #scope, #geolocation').change(function() {
+                // Empty the #results div on change.
+                $results.empty();
 
-            // isLikeSegment = $segment.val() == "all" ? true : isLikeSegment = $segment.val() == ref.segment;
+                // Running through JSON data.
+                $.each(data, function(i, reference) {
+                    // Assign the values to give true when selected is "All".
+                    let scope_value = $scope.val() == all;
+                    let segment_value = $segment.val() == all;
+                    let location_value = $geolocation.val() == all;
 
-            if(!isLikeSegment) {
-                isLikeSegment = $segment.val() === ref.segment;
-            }
-            if(!isLikeScope) {
-                isLikeScope = $scope.val().map(scope => ref.scope.includes(scope)).includes(true);
-                console.log(isLikeScope);
-            }
-            if(!isLikeLocation) {
-                console.log($geolocation.val(), ref.location[1]);
-                isLikeLocation = $geolocation.val() == ref.location[1];
-            }
+                    // If the assigned value is not true.. 
+                    if(!segment_value) segment_value = $segment.val() === reference.segment; console.log(segment_value);
+                    if(!scope_value) scope_value = $scope.val().map(scope => reference.scope.includes(scope)).includes(true);
+                    if(!location_value) location_value = $geolocation.val() === reference.location[0] || $geolocation.val() === reference.location[1];
 
-            if(isLikeSegment && isLikeScope && isLikeLocation) appendJSON(ref);
-        });
-    } 
-
-    function selectedGeolocation(data) {
-        $geolocation.change(function() {
-            $results.empty();
-            $.each(data, function(i, ref) {
-                $.each(ref.location, function(j, location) {
-                    if($geolocation.val() === location) {
-                        console.log(ref.name+" -- "+ref.location);
-                        appendJSON(ref);
-                    }
-                }); 
+                    // Append to HTML whenever the conditions matches.
+                    if(segment_value && scope_value && location_value) appendJSON(reference); 
+                });
+                rsCounter();
             });
         });
     }
 
-    function selectedScope(data) {
-        $scope.change(function() {
-            $results.empty();
-            $.each(data, function(i, ref) {
-                $.each(ref.scope, function(j, scope) {
-                    if($scope.val() === scope) {
-                        console.log(ref.name+" -- "+ref.scope); // Test
-                        appendJSON(ref);
-                    }
-                }); 
-            });
-        });
-    }
+    /**
+     * Helper function to count the number of ".result"-divs.
+     */
+    function rsCounter() {
+        let $count = $('#counter');
+        let div_length = $('.col-3').length;
 
-    function selectedSegment(data) {
-        $segment.change(function() {
-            $results.empty();
-            $.each(data, function(i, ref) {
-                if($segment.val() === ref.segment) {
-                    console.log(ref.name+" -- "+ref.segment); // Test
-                    appendJSON(ref);
-                }
-            });
-        });
-    }
+        $count.empty();
 
-    function showAll(data) {
-        $.each(data, function(i, ref) {
-            appendJSON(ref);
-        });
+        if(!div_length) $count.hide().append(`<h2>The search criteria provided no results</h2>`).fadeIn(1000);
+        else $count.hide().append(`<h2>There are ${div_length} results listed below</h2>`).fadeIn(1000);
     }
 
     /**
@@ -105,46 +82,24 @@ $(document).ready(function () {
             <a href=${data.link}>
                 <div class="col-3 col-3--md">
                     <div class="container__image">
-                    <img src=${data.image} class="img--resize">
+                        <img src=${data.image} class="img--resize">
+                    </div>
+                    <div class="container__text">
+                        <span class="container__text--header">${data.name}</span>
+                        <p>${data.description}</p>
+                    </div>
                 </div>
-                <div class="container__text">
-                    <span class="container__text--header">${data.name}</span>
-                    <p>${data.description}</p>
-                </div>
-            </div>
             </a>
         `);
         // For some slightly fancy animation
-        $(output).hide().appendTo($results).fadeIn(500);
+        $(output).hide().appendTo($results).fadeIn(900);
     }
 
-    /**
-     * Passing the JSON data to HTML page.
-     * Not sure if this will be needed anymore - keeping it anyways.
-     
-    function htmlJSON(data) {
-        let output = [];
-
-        // Going through for-loop to get the individual objects.
-        for(let i = 0; i < data.length; i++) {
-            output.push(`
-            <a href=${data[i].link}>
-                <div class="col-3 col-3--md">
-                    <div class="container__image">
-                        <img src=${data[i].image} class="img--resize">
-                    </div>
-                    <div class="container__text">
-                        <span class="container__text--header">${data[i].name}</span>
-                        <p>${data[i].description}</p>
-                    </div>
-                </div>
-            </a>
-            `);
-        }
-        // Output to HTML.
-        $results.html(output.join(''));
-    }
-    */
-    
+    //=============================================================================//
+    //                               STYLING4PRETTY                                //
+    //=============================================================================//
+    $segment.select2();
+    $scope.select2();
+    $geolocation.select2();
 
 }); // END DOCUMENT
