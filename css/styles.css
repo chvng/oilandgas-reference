@@ -79,6 +79,25 @@ body {
     box-sizing: border-box;
 }
 
+h1 {
+    font-weight: bolder;
+    font-size: 35px;
+    padding: 15px;
+}
+
+h1::before {
+    content: "—";
+    display: block;
+    color: #ff000f;
+    font-size: inherit;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px 20px 10px 0px;
+}
+
 p {
     font-size: 13px;
     margin-top: 5px;
@@ -105,10 +124,14 @@ select {
     border-radius: 4px;
     box-shadow: inset 1px 1px 2px #ddd8dc;
     background: #fff; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 5px;
 }
 
-.select--category { font-weight: bold; }
-.select--item { padding-left: 25px;}
+
+.select--bold { font-weight: bold; }
 
 /*==========================
             ROW/COLUMN
@@ -122,7 +145,7 @@ select {
 
 [class*="col-"] {
     float: left;
-    padding: 20px;
+    padding: 15px;
 }
 
 .col-1  { width: 8.33%; }
@@ -182,8 +205,10 @@ select {
 
 .container__category {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     background-color: #f1f1f1;
+    border: 1px solid #d2d2d2;
+    display: block;
 }
 
 .container__text {
@@ -199,7 +224,6 @@ select {
     font-weight: 500;
     line-height: 21px;
 }
-
 
 .container__image {
     overflow: hidden;
@@ -218,4 +242,23 @@ select {
 .img--resize {
     height:     100%;
     max-width:  100%;
+}
+
+/*==========================
+            SELECT2
+============================*/
+
+ul.select2-selection__rendered {
+    padding-right: 30px !important;
+}
+
+ul.select2-selection__rendered:after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 5px solid #333;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
 }
