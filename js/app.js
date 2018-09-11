@@ -44,8 +44,8 @@ $(document).ready(function () {
                 // Running through JSON data.
                 $.each(data, function(i, reference) {
                     // Assign the values to give true when selected is "All".
-                    let scope_value = $scope.val() == all;
-                    let segment_value = $segment.val() == all;
+                    let scope_value = $scope.val() === null;
+                    let segment_value = $segment.val() == all; 
                     let location_value = $geolocation.val() == all;
 
                     // If the assigned value is not true.. 
@@ -70,8 +70,8 @@ $(document).ready(function () {
 
         $count.empty();
 
-        if(!div_length) $count.hide().append(`<h2>The search criteria provided no results</h2>`).fadeIn(1000);
-        else $count.hide().append(`<h2>There are ${div_length} results listed below</h2>`).fadeIn(1000);
+        if(!div_length) $count.hide().append(`<h2>The search criteria provided no results</h2>`).fadeIn(700);
+        else $count.hide().append(`<h2>There are ${div_length} results listed below</h2>`).fadeIn(700);
     }
 
     /**
@@ -92,14 +92,24 @@ $(document).ready(function () {
             </a>
         `);
         // For some slightly fancy animation
-        $(output).hide().appendTo($results).fadeIn(900);
+        $(output).hide().appendTo($results).fadeIn(600);
     }
 
     //=============================================================================//
     //                               STYLING4PRETTY                                //
     //=============================================================================//
-    $segment.select2();
-    $scope.select2();
-    $geolocation.select2();
+    $segment.select2({
+        minimumResultsForSearch: -1
+    }); 
+
+    $scope.select2({
+        placeholder: "All scopes",
+        minimumResultsForSearch: -1
+    });
+
+    $geolocation.select2({
+        minimumResultsForSearch: -1
+    }); 
+
 
 }); // END DOCUMENT
