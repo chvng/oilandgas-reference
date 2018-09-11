@@ -44,8 +44,8 @@ $(document).ready(function () {
                 // Running through JSON data.
                 $.each(data, function(i, reference) {
                     // Assign the values to give true when selected is "All".
-                    let scope_value = $scope.val() === null;
                     let segment_value = $segment.val() == all; 
+                    let scope_value = $scope.val() == false;
                     let location_value = $geolocation.val() == all;
 
                     // If the assigned value is not true.. 
