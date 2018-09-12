@@ -15,6 +15,7 @@ $(document).ready(function () {
 
     function program() {
         rsAll();
+        rsSearch();
         rsFilter();
     }
 
@@ -27,6 +28,39 @@ $(document).ready(function () {
                 appendJSON(reference);
             });
             rsCounter();
+        });
+    }
+
+    /**
+     * Function with a live search filter that matches either name or year in JSON.
+     */
+    function rsSearch() {
+        let $search = $('#search');
+
+        $.getJSON("../references.json", function(data) {
+            $search.keyup(function() {
+                $results.empty();
+                let expression = new RegExp($search.val(), 'i');
+                $.each(data, function(i, reference) {
+                    if((reference.name.search(expression) !== -1) || (reference.year.search(expression) !== -1)) {
+                        let output = (`
+                        <a href=${reference.link}>
+                            <div class="col-3 col-3--md">
+                                <div class="container__image">
+                                    <img src=${reference.image} class="img--resize">
+                                </div>
+                                <div class="container__text">
+                                    <span class="container__text--header">${reference.name}</span>
+                                    <p>${reference.description}</p>
+                                </div>
+                            </div>
+                        </a>
+                    `);
+                    $(output).hide().appendTo($results).fadeIn(600);
+                    }
+                });
+                rsCounter();
+            });
         });
     }
 
@@ -70,8 +104,8 @@ $(document).ready(function () {
 
         $count.empty();
 
-        if(!div_length) $count.hide().append(`<h2>The search criteria provided no results</h2>`).fadeIn(700);
-        else $count.hide().append(`<h2>There are ${div_length} results listed below</h2>`).fadeIn(700);
+        if(!div_length) $count.hide().append(`<h2>The search criteria provided no results</h2>`).fadeIn(600);
+        else $count.hide().append(`<h2>There are ${div_length} results listed below</h2>`).fadeIn(600);
     }
 
     /**
@@ -108,7 +142,19 @@ $(document).ready(function () {
     });
 
     $geolocation.select2({
-        minimumResultsForSearch: -1
+        minimumResultsForSearch: -1,
+        templateResult: function(data) {    
+            if (!data.element) {
+              return data.text;
+            }
+        
+            let $element = $(data.element);
+            let $wrapper = $('<span></span>');
+            $wrapper.addClass($element[0].className);
+            $wrapper.text(data.text);
+        
+            return $wrapper;
+          }
     }); 
 
 
