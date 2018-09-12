@@ -45,13 +45,13 @@ $(document).ready(function () {
                     if((reference.name.search(expression) !== -1) || (reference.year.search(expression) !== -1)) {
                         let output = (`
                         <a href=${reference.link}>
-                            <div class="col-4 col-3--md">
+                            <div class="col-4 col--md">
                                 <div class="container__image">
                                     <img src=${reference.image} class="img--resize">
                                 </div>
                                 <div class="container__text">
-                                    <span class="container__text--header">${reference.name}</span>
-                                    <p>${reference.description}</p>
+                                    <span class="container__text--h">${reference.name}</span>
+                                    <p class="container__text--p">${reference.description}</p>
                                 </div>
                             </div>
                         </a>
@@ -100,7 +100,7 @@ $(document).ready(function () {
      */
     function rsCounter() {
         let $count = $('#counter');
-        let div_length = $('.col-3--md').length;
+        let div_length = $('.col--md').length;
 
         $count.empty();
 
@@ -114,13 +114,17 @@ $(document).ready(function () {
     function appendJSON(data) {
         let output = (`
             <a href=${data.link}>
-                <div class="col-4 col-3--md">
+                <div class="col-4 col--md">
                     <div class="container__image">
                         <img src=${data.image} class="img--resize">
                     </div>
                     <div class="container__text">
-                        <span class="container__text--header">${data.name}</span>
-                        <p>${data.description}</p>
+                        <div class="container__text--h">
+                            ${data.name}
+                        </div>
+                        <div class="container__text--p">
+                            ${data.description}
+                        </div>
                     </div>
                 </div>
             </a>
@@ -130,7 +134,7 @@ $(document).ready(function () {
     }
 
     //=============================================================================//
-    //                               STYLING4PRETTY                                //
+    //                               #4BEAUTIFICATION                              //
     //=============================================================================//
     $segment.select2({
         minimumResultsForSearch: -1
