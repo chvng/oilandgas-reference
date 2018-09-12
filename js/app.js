@@ -99,7 +99,7 @@ $(document).ready(function () {
      * Helper function to count the number of ".result"-divs.
      */
     function rsCounter() {
-        let $count = $('#counter');
+        let $count = $('.counter');
         let div_length = $('.col--md').length;
 
         $count.empty();
