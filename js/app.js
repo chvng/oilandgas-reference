@@ -23,7 +23,7 @@ $(document).ready(function () {
      * Appending all the results from JSON to HTML with no conditions.
      */
     function rsAll() {
-        $.getJSON("../references.json", function(data) {
+        $.getJSON("https://edit.abb.com/docs/librariesprovider94/oil-gas-reference/references.json?sfvrsn=6c8ce314_8", function(data) {
             $.each(data, function(i, reference) {
                 appendJSON(reference);
             });
@@ -37,7 +37,7 @@ $(document).ready(function () {
     function rsSearch() {
         let $search = $('#search');
 
-        $.getJSON("../references.json", function(data) {
+        $.getJSON("https://edit.abb.com/docs/librariesprovider94/oil-gas-reference/references.json?sfvrsn=6c8ce314_8", function(data) {
             $search.keyup(function() {
                 $results.empty();
                 let expression = new RegExp($search.val(), 'i');
@@ -70,7 +70,7 @@ $(document).ready(function () {
     function rsFilter() {
         let all = "All";
 
-        $.getJSON("../references.json", function(data) {
+        $.getJSON("https://edit.abb.com/docs/librariesprovider94/oil-gas-reference/references.json?sfvrsn=6c8ce314_8", function(data) {
             $('#segment, #scope, #geolocation').change(function() {
                 // Empty the #results div on change.
                 $results.empty();
