@@ -110,28 +110,47 @@ a {
 }
 
 /*==========================
+            INPUT
+============================*/
+
+input {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border: none;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+@media screen and (max-width: 600px) {
+    input[type=text] {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
+
+/*==========================
             SELECT
 ============================*/
 
-select {
-    display: inline-block;
-    height:30px;
-    width: 150px;
-    padding: 2px 10px 2px 2px;
-    outline: none;
-    color: #74646e;
-    border: 1px solid #C8BFC4;
-    border-radius: 4px;
-    box-shadow: inset 1px 1px 2px #ddd8dc;
-    background: #fff; 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: 5px;
+.select__optgroup { 
+    font-weight: 700;
+    color: #6c6c6c;
 }
-
-
-.select--bold { font-weight: bold; }
+.select__option { padding-left: 1em; }
 
 /*==========================
             ROW/COLUMN
@@ -165,6 +184,23 @@ select {
     height: 290px;
     box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.1);
 }
+
+.col-12--center {
+    text-align: center;
+    padding-top: 0px;
+}
+
+.col__line {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+
 
 /*==========================
             CONTAINER
@@ -248,6 +284,33 @@ select {
             SELECT2
 ============================*/
 
+.select2-selection--single {
+    height: 32px !important;
+}
+
+.select2-selection .select2-selection--multiple {
+    color: black;
+}
+
+li.select2-selection__choice {
+    position: relative              !important;
+    font-size: 13px                 !important;
+    margin: 5px 0 3px 5px           !important;
+    padding: 8px 20px 8px 10px      !important;
+    background-color: #6e6e6e       !important;
+    background-clip: padding-box    !important;
+    color: #fff                     !important;
+    line-height: 13px               !important;
+    cursor: default                 !important;
+    text-overflow: ellipsis         !important;
+    border-radius: 20px             !important;
+}
+
+ul.select2-results__options {
+    overflow: auto      !important;
+    height: 500px       !important;
+}
+
 ul.select2-selection__rendered {
     padding-right: 30px !important;
 }
@@ -262,3 +325,4 @@ ul.select2-selection__rendered:after {
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
 }
+
