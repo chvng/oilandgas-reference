@@ -117,7 +117,6 @@ input {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
-    border: none;
     padding: 6px;
     margin-top: 8px;
     margin-right: 16px;
@@ -137,6 +136,7 @@ textarea:focus, input:focus{
         margin: 0;
         padding: 14px;
     }
+
     input[type=text] {
         border: 1px solid #ccc;
     }
@@ -163,26 +163,29 @@ textarea:focus, input:focus{
 }
 
 [class*="col-"] {
-    float: left;
-    padding: 15px;
+    float:left;
+    padding: 10px;
+    width: 100%;
 }
 
-.col-1  { width: 8.33%; }
-.col-2  { width: 16.66%;}
-.col-3  { width: 25%;   }
-.col-4  { width: 33.33%;}
-.col-5  { width: 41.66%;}
-.col-6  { width: 50%;   }
-.col-7  { width: 58.33%;}
-.col-8  { width: 66.66%;}
-.col-9  { width: 75%;   }
-.col-10 { width: 83.33%;}
-.col-11 { width: 91.66%;}
-.col-12 { width: 100%;  }
+@media only screen and (min-width: 768px) {
+    .col-1  { width: 8.33%; }
+    .col-2  { width: 16.66%;}
+    .col-3  { width: 25%;   }
+    .col-4  { width: 33.33%;}
+    .col-5  { width: 41.66%;}
+    .col-6  { width: 50%;   }
+    .col-7  { width: 58.33%;}
+    .col-8  { width: 66.66%;}
+    .col-9  { width: 75%;   }
+    .col-10 { width: 83.33%;}
+    .col-11 { width: 91.66%;}
+    .col-12 { width: 100%;  }
+}
 
 .col-3--md {
     height: 290px;
-    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.1);
+    
 }
 
 .col-12--center {
@@ -240,10 +243,7 @@ textarea:focus, input:focus{
 }
 
 .container__category {
-    width: 100%;
     padding: 10px;
-    background-color: #f1f1f1;
-    border: 1px solid #d2d2d2;
     display: block;
 }
 
@@ -253,6 +253,7 @@ textarea:focus, input:focus{
     padding-top: 0.5em;
     line-height: 1em;
     text-overflow: ellipsis;
+    background-color: #f7f7f7fa;
 }
 
 .container__text--header {
@@ -297,9 +298,9 @@ li.select2-selection__choice {
     font-size: 13px                 !important;
     margin: 5px 0 3px 5px           !important;
     padding: 8px 20px 8px 10px      !important;
-    background-color: #6e6e6e       !important;
+    background-color: #6e6e6e     !important;
     background-clip: padding-box    !important;
-    color: #fff                     !important;
+    color: #fff                   !important;
     line-height: 13px               !important;
     cursor: default                 !important;
     text-overflow: ellipsis         !important;
