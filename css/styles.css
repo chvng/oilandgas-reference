@@ -81,7 +81,7 @@ body {
 
 h1 {
     font-weight: bolder;
-    font-size: 35px;
+    font-size: 30px;
     padding: 15px;
 }
 
@@ -376,3 +376,9 @@ ul.select2-selection__rendered:after {
     border-color: #888 transparent transparent transparent
 }
 
+.counter {
+    padding: 20px 0px 20px 0px; 
+    float:right; 
+    padding-top:6%; 
+    padding-bottom: 0;
+}
