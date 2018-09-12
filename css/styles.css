@@ -117,7 +117,6 @@ input {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
-    border: none;
     padding: 6px;
     margin-top: 8px;
     margin-right: 16px;
@@ -164,7 +163,7 @@ textarea:focus, input:focus{
 
 [class*="col-"] {
     float: left;
-    padding: 15px;
+    padding: 7px;
 }
 
 .col-1  { width: 8.33%; }
@@ -182,11 +181,11 @@ textarea:focus, input:focus{
 
 .col-3--md {
     height: 290px;
-    box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 15px 50px 30px 5px;
 }
 
 .col-12--center {
-    text-align: center;
+
     padding-top: 0px;
 }
 
@@ -245,20 +244,32 @@ textarea:focus, input:focus{
     background-color: #f1f1f1;
     border: 1px solid #d2d2d2;
     display: block;
+    margin-bottom: 15px;
 }
 
 .container__text {
+    height: 9.7em;
     display: block;
-    height: 9.5em;
+    padding: 5px;
     padding-top: 0.5em;
     line-height: 1em;
     text-overflow: ellipsis;
+    background-color: #f7f7f7fa;
+    border-radius: 0px 0px 5px 5px;
 }
 
-.container__text--header {
-    font-size: 20px;
+.container__text--h {
+    font-size: 18px;
     font-weight: 500;
-    line-height: 21px;
+    line-height: 20px;
+}
+
+.container__text--p {
+    font-size: 13px;
+    padding-top: 10px;
+    margin-top: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .container__image {
@@ -268,6 +279,7 @@ textarea:focus, input:focus{
     width: 100%;
     padding: 0;
     position: relative;
+    border-radius: 5px 5px 0px 0px;
     
 }
 
