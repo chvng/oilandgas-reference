@@ -7,7 +7,7 @@
         "segment": "Natural Gas liquefaction",
         "scope": ["Automation"],
         "location": ["Oceania", "Australia"],
-        "year": 2014
+        "year": "2014"
     },
     {
         "name": "Statoil telecommunication system",
@@ -17,7 +17,7 @@
         "segment": "Offshore platforms",
         "scope": ["Telecommunications"],
         "location": ["Europe", "Norway"],
-        "year": 2015
+        "year": "2015"
     },
     {
         "name": "Eni Goliat FPSO",
@@ -27,7 +27,7 @@
         "segment": "Floating production",
         "scope": ["Integrated operations", "Telecommunications", "Instrumentation and analyzers"],
         "location": ["Europe", "Norway"],
-        "year": 2015
+        "year": "2015"
     },
     {
         "name": "Statoil Troll electrification",
@@ -37,7 +37,7 @@
         "segment": "Offshore platforms",
         "scope": ["Process electrification"],
         "location": ["Europe", "Norway"],
-        "year": 2015
+        "year": "2015"
     },
     {
         "name": "BP Valhall automation and telecommunications",
@@ -47,7 +47,7 @@
         "segment": "Offshore platforms",
         "scope": ["Automation", "Telecommunications", "Integrated operations", "Safety Systems"],
         "location": ["Europe", "Norway"],
-        "year": 2015
+        "year": "2015"
     },
     {
         "name": "Statoil Subsea Power Joint Industry Project",
@@ -57,7 +57,7 @@
         "segment": "Subsea",
         "scope": ["Process electrification"],
         "location": ["Europe", "Norway"],
-        "year": 2017
+        "year": "2017"
     },
     {
         "name": "Statoil Åsgard Subsea",
@@ -67,7 +67,7 @@
         "segment": "Subsea",
         "scope": ["Process electrification"],
         "location": ["Europe", "Norway"],
-        "year": 2015
+        "year": "2015"
     },
     {
         "name": "Shell Ormen Lange",
@@ -77,7 +77,7 @@
         "segment": "Subsea",
         "scope": ["Process electrification", "Automation", "Safety Systems"],
         "location": ["Europe", "Norway"],
-        "year": 2014
+        "year": "2014"
     },
     {
         "name": "Petronas PFLNG 2",
@@ -87,7 +87,7 @@
         "segment": "Natural Gas liquefaction",
         "scope": ["Process electrification"],
         "location": ["Asia and Middle East", "Malaysia"],
-        "year": 2018
+        "year": "2018"
     },
     {
         "name": "BP Skarv FPSO",
@@ -97,7 +97,7 @@
         "segment": "Floating production",
         "scope": ["Telecommunications"],
         "location": ["Europe", "Norway"],
-        "year": 2011
+        "year": "2011"
     },
     {
         "name": "Marathon Petroleum Alvheim FPSO",
@@ -107,7 +107,7 @@
         "segment": "Floating production",
         "scope": ["Telecommunications"],
         "location": ["Europe", "Norway"],
-        "year": 2007
+        "year": "2007"
     },
     {
         "name": "EnQuest Kraken FPSO electrification and automation",
@@ -117,7 +117,7 @@
         "segment": "Floating production",
         "scope": ["Automation", "Process electrification"],
         "location": ["Europe", "United Kingdom"],
-        "year": 2017
+        "year": "2017"
     },
     {
         "name": "Statoil Johan power from shore",
@@ -127,7 +127,7 @@
         "segment": "Offshore platforms",
         "scope": ["Process electrification"],
         "location": ["Europe", "Norway"],
-        "year": 2019
+        "year": "2019"
     },
     {
         "name": "ELR1 – Pumping Station",
@@ -137,7 +137,7 @@
         "segment": "Gas processing",
         "scope": ["Automation", "Process electrification", "Telecommunications"],
         "location": ["Africa", "Algeria"],
-        "year": 2015
+        "year": "2015"
     },
     {
         "name": "Petrobras Gabriel Passos refinery modernization",
@@ -147,7 +147,7 @@
         "segment": "Refining",
         "scope": ["Services"],
         "location": ["South America", "Brazil"],
-        "year": 2015
+        "year": "2015"
     },
     {
         "name": "Zadco Zirku Island power upgrade",
@@ -155,9 +155,9 @@
         "image": "https://www07.abb.com/images/librariesprovider94/Header-image-1183x350/zirku-1183x353.jpg?sfvrsn=14eaa11e_0",
         "description": "ABB upgrading power systems for gian Gulf oilfied",
         "segment": "Conventional onshore",
-        "scope": ["Engineering procurement and construction"],
+        "scope": ["Engineering, procurement and construction"],
         "location": ["Asia and Middle East", "United Arab Emirates"],
-        "year": 2016
+        "year": "2016"
     },
     {
         "name": "Nawara gas treatment plant",
@@ -165,9 +165,9 @@
         "image": "https://www07.abb.com/images/librariesprovider94/Header-image-1183x350/nawara-1183x353a41ec2e6c1f463c09537ff0000433538.jpg?sfvrsn=9aeaa11e_0",
         "description": "Turnkey project will be key part of country's economy",
         "segment": "Gas processing",
-        "scope": ["Engineering procurement and construction"],
+        "scope": ["Engineering, procurement and construction"],
         "location": ["Africa", "Tunisia"],
-        "year": 2016
+        "year": "2016"
     },
     {
         "name": "Al Nasr",
@@ -177,7 +177,7 @@
         "segment": "Offshore platforms",
         "scope": ["Process electrification"],
         "location": ["Asia and Middle East", "United Arab Emirates"],
-        "year": 2018
+        "year": "2018"
     },
     {
         "name": "Upgrading Petrobras' Refap refinery",
@@ -187,7 +187,7 @@
         "segment": "Refining",
         "scope": ["Services"],
         "location": ["South America", "Brazil"],
-        "year": 2015
+        "year": "2015"
     },
     {
         "name": "ABB to power new Angolan oil field",
@@ -197,7 +197,6 @@
         "segment": "Floating production",
         "scope": ["Automation", "Integrated operations", "Process electrification"],
         "location": ["Africa", "Angola"],
-        "year": 2015
+        "year": "2015"
     }
-
 ]
