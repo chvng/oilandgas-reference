@@ -37,11 +37,11 @@
                     <option value="Unconventional onshore">Unconventional onshore</option>
                     <option value="Offshore platforms">Offshore platforms</option>
                 </select>
-        </div>
-        <div class="col-4">
+            </div>
+            <div class="col-4">
                 <h3>Scope(s)</h3>
-                <select name="Scope" id="scope" multiple="multiple" tabindex="3" style="width: 100%;">
-                    <option value="All" selected="selected">All scopes</option>
+                <select name="Scope" id="scope" multiple="multiple" style="width: 100%;">
+    
                     <option value="Automation">Automation</option>
                     <option value="Engineering, procurement and construction">Engineering, procurement and construction</option>
                     <option value="Process electrification">Process electrification</option>
@@ -51,33 +51,36 @@
                     <option value="Services">Services</option>
                     <option value="Telecommunications">Telecommunications</option>
                 </select>
-        </div>
-        <div class="col-4">
+            </div>
+            <div class="col-4">
                 <h3>Geographical location</h3>
                 <select name="Geographical Location" id="geolocation" style="width: 100%;">
                     <option value="All" selected="selected">All locations</option>
-                    <option class="select--bold" value="Africa">Africa</option>
-                        <option value="Angola">&nbsp;&nbsp;&nbsp;Angola</option>
-                        <option value="Tunisia">&nbsp;&nbsp;&nbsp;Tunisia</option>
-                        <option value="Algeria">&nbsp;&nbsp;&nbsp;Algeria</option>
     
-                    
-                    <option class="select--bold" value="Asia and Middle East">Asia and Middle East</option>
-                        <option value="Malaysia">&nbsp;&nbsp;&nbsp;Malaysia</option>
-                        <option value="United Arab Emirates">&nbsp;&nbsp;&nbsp;United Arab Emirates</option>
-                        
-                  <option class="select--bold" value="Europe">Europe</option>
-                        <option value="Norway">&nbsp;&nbsp;&nbsp;Norway</option>
-                        <option value="United Kingdom">&nbsp;&nbsp;&nbsp;United Kingdom</option>
-
-                    <option class="select--bold" value="Oceania">Africa</option>
-                        <option value="Australia">&nbsp;&nbsp;&nbsp;Australia</option>
-                    
-                    <option class="select--bold" value="South America">South America</option>
-                        <option value="Brazil">&nbsp;&nbsp;&nbsp;Brazil</option>
-                    
+                    <option class="select__optgroup" value="Africa">Africa</option>
+                    <option class="select__option" value="Angola">Angola</option>
+                    <option class="select__option" value="Tunisia">Tunisia</option>
+                    <option class="select__option" value="Algeria">Algeria</option>
+    
+                    <option class="select__optgroup" value="Asia and Middle East">Asia and Middle East</option>
+                    <option class="select__option" value="Malaysia">Malaysia</option>
+                    <option class="select__option" value="United Arab Emirates">United Arab Emirates</option>
+    
+                    <option class="select__optgroup" value="Europe">Europe</option>
+                    <option class="select__option" value="Norway">Norway</option>
+                    <option class="select__option" value="United Kingdom">United Kingdom</option>
+    
+                    <option class="select__optgroup" value="Oceania">Africa</option>
+                    <option class="select__option" value="Australia">Australia</option>
+    
+                    <option class="select__optgroup" value="South America">South America</option>
+                    <option class="select__option" value="Brazil">Brazil</option>
                 </select>
-            </div> 
+            </div>
+            <div class="col-12 col-12--center" id="searchfield">
+                <div class="col__line"></div>
+                <input type="input" id="search" placeholder="Search.." style="width:50%; height: 32px; align-content: center;">
+            </div>
         </div>
     </div>
 
