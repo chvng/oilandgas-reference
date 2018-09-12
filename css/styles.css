@@ -183,14 +183,18 @@ textarea:focus, input:focus{
     .col-12 { width: 100%;  }
 }
 
-.col-3--md {
+.col--md {
     height: 290px;
-    
+    border-radius: 15px 50px 30px 5px;
 }
 
 .col-12--center {
     text-align: center;
     padding-top: 0px;
+}
+
+.col--width {
+    width: 90%;
 }
 
 .col__line {
@@ -203,13 +207,45 @@ textarea:focus, input:focus{
     border-width: 1px;
 }
 
+.col__side {
+    width: 100%;
+    position: relative;
+}
 
+@media (min-width: 576px) {
+    .col__side {
+        width: 25%;
+        position: fixed;
+    }
+}
+
+@media (min-width: 768px) {
+    .col__side {
+        width: 25%;
+        position: fixed;
+    }
+}
+
+@media (min-width: 992px) {
+    .col__side {
+        width: 25%;
+        position: fixed;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col__side {
+        width: 25%;
+        position: fixed;
+    }
+}
 
 /*==========================
             CONTAINER
 ============================*/
 
 .container {
+    height:        auto;
     width:         100%;
     padding-right: 15px;
     padding-left:  15px;
@@ -248,18 +284,28 @@ textarea:focus, input:focus{
 }
 
 .container__text {
+    height: 9.7em;
     display: block;
-    height: 9.5em;
+    padding: 5px;
     padding-top: 0.5em;
     line-height: 1em;
     text-overflow: ellipsis;
     background-color: #f7f7f7fa;
+    border-radius: 0px 0px 10px 10px;
 }
 
-.container__text--header {
-    font-size: 20px;
+.container__text--h {
+    font-size: 18px;
     font-weight: 500;
-    line-height: 21px;
+    line-height: 20px;
+}
+
+.container__text--p {
+    font-size: 13px;
+    padding-top: 10px;
+    margin-top: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .container__image {
@@ -269,6 +315,7 @@ textarea:focus, input:focus{
     width: 100%;
     padding: 0;
     position: relative;
+    border-radius: 20px 20px 0px 0px;
     
 }
 
@@ -319,11 +366,13 @@ ul.select2-selection__rendered {
 ul.select2-selection__rendered:after {
     content: "";
     position: absolute;
-    right: 10px;
+    right: 8px;
     top: 50%;
     transform: translateY(-50%);
-    border-top: 5px solid #333;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
+    border-top: 4px solid;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-width: 5px 4px 0;
+    border-color: #888 transparent transparent transparent
 }
 
