@@ -14,91 +14,95 @@
 </head>
 
 <body>
-    <div class="container" section="main">
+    <div class="container">
         <div class="header">
+            <div id="counter" style="padding: 20px 0px 20px 0px; float:right; padding-top:7%; padding-bottom: 0;"></div>
             <h1>Oil & Gas References</h1>
         </div>
+        <hr>
 
         <div class="container__category">
-            <div class="row">
-                <div class="row" id="categories">
+            <div class="row" id="main">
+                <div class="row" id="nested-main">
+
                     <div class="col-4">
-                        <div class="col-12">
-                            <h3>Segment</h3>
-                            <select name="Segment" id="segment" style="width: 100%;">
-                                <option value="All" selected="selected">All segments</option>
-                                <option value="Conventional onshore">Conventional onshore</option>
-                                <option value="Floating production">Floating production</option>
-                                <option value="Gas processing">Gas processing</option>
-                                <option value="Natural Gas liquefaction">Natural Gas liquefaction</option>
-                                <option value="Petrochemicals">Petrochemicals</option>
-                                <option value="Pipelines">Pipelines</option>
-                                <option value="Refining">Refining</option>
-                                <option value="Subsea">Subsea</option>
-                                <option value="Terminals">Terminals</option>
-                                <option value="Unconventional onshore">Unconventional onshore</option>
-                                <option value="Offshore platforms">Offshore platforms</option>
-                            </select>
+                        <div class="col__side">
+                            <div class="col-12" id="fourth-filter">
+                                <input class="col--width" type="input" id="search" placeholder="Search..">
+                            </div>
+    
+                            <div class="col-12" id="first-filter">
+                                <h3>Segment</h3>
+                                <select class="col--width" name="Segment" id="segment">
+                                    <option value="All" selected="selected">All segments</option>
+                                    <option value="Conventional onshore">Conventional onshore</option>
+                                    <option value="Floating production">Floating production</option>
+                                    <option value="Gas processing">Gas processing</option>
+                                    <option value="Natural Gas liquefaction">Natural Gas liquefaction</option>
+                                    <option value="Petrochemicals">Petrochemicals</option>
+                                    <option value="Pipelines">Pipelines</option>
+                                    <option value="Refining">Refining</option>
+                                    <option value="Subsea">Subsea</option>
+                                    <option value="Terminals">Terminals</option>
+                                    <option value="Unconventional onshore">Unconventional onshore</option>
+                                    <option value="Offshore platforms">Offshore platforms</option>
+                                </select>
+                            </div>
+    
+                            <div class="col-12" id="second-filter">
+                                <h3>Scope(s)</h3>
+                                <select class="col--width" name="Scope" id="scope" multiple="multiple">
+                                    <option value="Automation">Automation</option>
+                                    <option value="Engineering, procurement and construction">Engineering, procurement and construction</option>
+                                    <option value="Process electrification">Process electrification</option>
+                                    <option value="Instrumentation and analyzers">Instrumentation and analyzers</option>
+                                    <option value="Integrated operations">Integrated operations</option>
+                                    <option value="Safety systems">Safety systems</option>
+                                    <option value="Services">Services</option>
+                                    <option value="Telecommunications">Telecommunications</option>
+                                </select>
+                            </div>
+    
+                            <div class="col-12" id="third-filter">
+                                <h3>Geographical location</h3>
+                                <select class="col--width" name="Geographical Location" id="geolocation">
+                                    <option value="All" selected="selected">All locations</option>
+    
+                                    <option class="select__optgroup" value="Africa">Africa</option>
+                                    <option class="select__option" value="Angola">Angola</option>
+                                    <option class="select__option" value="Tunisia">Tunisia</option>
+                                    <option class="select__option" value="Algeria">Algeria</option>
+    
+                                    <option class="select__optgroup" value="Asia and Middle East">Asia and Middle East</option>
+                                    <option class="select__option" value="Malaysia">Malaysia</option>
+                                    <option class="select__option" value="United Arab Emirates">United Arab Emirates</option>
+    
+                                    <option class="select__optgroup" value="Europe">Europe</option>
+                                    <option class="select__option" value="Norway">Norway</option>
+                                    <option class="select__option" value="United Kingdom">United Kingdom</option>
+    
+                                    <option class="select__optgroup" value="Oceania">Africa</option>
+                                    <option class="select__option" value="Australia">Australia</option>
+    
+                                    <option class="select__optgroup" value="South America">South America</option>
+                                    <option class="select__option" value="Brazil">Brazil</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="col-12">
-                            <h3>Scope(s)</h3>
-                            <select name="Scope" id="scope" multiple="multiple" style="width: 100%;">
+                    </div> <!-- END FILTERS -->
 
-                                <option value="Automation">Automation</option>
-                                <option value="Engineering, procurement and construction">Engineering, procurement and
-                                    construction</option>
-                                <option value="Process electrification">Process electrification</option>
-                                <option value="Instrumentation and analyzers">Instrumentation and analyzers</option>
-                                <option value="Integrated operations">Integrated operations</option>
-                                <option value="Safety systems">Safety systems</option>
-                                <option value="Services">Services</option>
-                                <option value="Telecommunications">Telecommunications</option>
-                            </select>
-                        </div>
-                        <div class="col-12">
-                            <h3>Geographical location</h3>
-                            <select name="Geographical Location" id="geolocation" style="width: 100%;">
-                                <option value="All" selected="selected">All locations</option>
-
-                                <option class="select__optgroup" value="Africa">Africa</option>
-                                <option class="select__option" value="Angola">Angola</option>
-                                <option class="select__option" value="Tunisia">Tunisia</option>
-                                <option class="select__option" value="Algeria">Algeria</option>
-
-                                <option class="select__optgroup" value="Asia and Middle East">Asia and Middle East</option>
-                                <option class="select__option" value="Malaysia">Malaysia</option>
-                                <option class="select__option" value="United Arab Emirates">United Arab Emirates</option>
-
-                                <option class="select__optgroup" value="Europe">Europe</option>
-                                <option class="select__option" value="Norway">Norway</option>
-                                <option class="select__option" value="United Kingdom">United Kingdom</option>
-
-                                <option class="select__optgroup" value="Oceania">Africa</option>
-                                <option class="select__option" value="Australia">Australia</option>
-
-                                <option class="select__optgroup" value="South America">South America</option>
-                                <option class="select__option" value="Brazil">Brazil</option>
-                            </select>
-                        </div>
-                        <div class="col-12" id="searchfield">
-                            <input type="input" id="search" placeholder="Search.." style="width:100%; height: 32px;">
-                        </div>
+                    <div class="col-8" id="content">
+                        <div id="results"></div>
                     </div>
-                    <div class="col-8">
-                        <div class="row" id="counter" style="padding: 20px 0px 20px 0px;"></div>
-                        <div class="row" id="results"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
+                </div> <!-- END #NESTED-MAIN -->
+            </div> <!-- END #MAIN -->
+        </div> <!-- END CATEGORY -->
+    </div> <!-- ENDT CONTAINER -->
 
-
-    </div> <!-- END MAIN -->
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 </body>
