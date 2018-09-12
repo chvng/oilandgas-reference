@@ -45,7 +45,7 @@ $(document).ready(function () {
                     if((reference.name.search(expression) !== -1) || (reference.year.search(expression) !== -1)) {
                         let output = (`
                         <a href=${reference.link}>
-                            <div class="col-3 col-3--md">
+                            <div class="col-4 col-3--md">
                                 <div class="container__image">
                                     <img src=${reference.image} class="img--resize">
                                 </div>
@@ -100,7 +100,7 @@ $(document).ready(function () {
      */
     function rsCounter() {
         let $count = $('#counter');
-        let div_length = $('.col-3').length;
+        let div_length = $('.col-3--md').length;
 
         $count.empty();
 
@@ -114,7 +114,7 @@ $(document).ready(function () {
     function appendJSON(data) {
         let output = (`
             <a href=${data.link}>
-                <div class="col-3 col-3--md">
+                <div class="col-4 col-3--md">
                     <div class="container__image">
                         <img src=${data.image} class="img--resize">
                     </div>
